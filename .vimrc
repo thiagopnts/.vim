@@ -6,7 +6,7 @@ if has("gui_running")
     set guifont=Monaco:h12
 endif
 "Turn the syntax on.
-syntax on
+
 
 "Init pathogen plugin. Pathogen helps to manager others plugins.
 call pathogen#infect()
@@ -39,8 +39,10 @@ set number
 
 filetype off
 
-set modelines=0
+"Auto open with NERDTree
+"au VimEnter * NERDTree
 
+set modelines=0
 filetype plugin indent on
 set ts=4
 set sw=4
@@ -82,8 +84,6 @@ map <leader>t :FuzzyFinderTextMate<CR>
 
 inoremap <C-space> <C-x><C-o>
 
-imap {<cr> {<cr>}<esc>O
-
 """"""""""""""""""""""""""""""""""""""""""
 "comp keys
 """"""""""""""""""""""""""""""""""""""""""
@@ -100,4 +100,6 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+"autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 
