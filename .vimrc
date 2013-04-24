@@ -5,8 +5,14 @@ endif
 if has("gui_running")
     set guifont=Monaco:h12
 endif
-"Turn the syntax on.
 
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+"Turn the syntax on.
+syntax on
 
 "Init pathogen plugin. Pathogen helps to manager others plugins.
 call pathogen#infect()
@@ -19,8 +25,6 @@ set shiftwidth=2
 set softtabstop=2
 set number
 set expandtab
-
-let mapleader = ","
 
 set encoding=utf-8
 set scrolloff=3
