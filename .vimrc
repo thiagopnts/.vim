@@ -36,8 +36,8 @@ set backspace=indent,eol,start
 set laststatus=2
 
 "Turn on the Jellybeans color scheme. Its my favorite btw :)
-"colorscheme jellybeans
-colorscheme Monokai
+colorscheme jellybeans
+"colorscheme Monokai
 
 "Turn on line numbers
 set number
