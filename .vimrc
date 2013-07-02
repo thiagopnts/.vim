@@ -35,7 +35,7 @@ set wildmode=list:longest
 set backspace=indent,eol,start
 set laststatus=2
 
-"Turn on the Jellybeans color scheme. Its my favorite btw :)
+"Turn on the Jellybeans color scheme.
 colorscheme jellybeans
 "colorscheme Monokai
 
@@ -75,6 +75,12 @@ set smartcase
 map <C-n> :tabnew<cr>
 map <c-tab> :tabnext<cr>
 map <C-S-tab> :tabprevious<cr>
+
+"ctrl p
+let g:ctrlp_map = '<c-p>'
+
+"powerline
+set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
 
 "Auto completion stuff.
 au FileType python set omnifunc=pythoncomplete#Complete
