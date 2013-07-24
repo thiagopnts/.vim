@@ -14,7 +14,7 @@ augroup END
 "Turn the syntax on.
 syntax on
 
-"Init pathogen plugin. Pathogen helps to manager others plugins.
+"Init pathogen plugin. Pathogen helps to manage others plugins.
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -75,6 +75,7 @@ set smartcase
 map <C-n> :tabnew<cr>
 map <c-tab> :tabnext<cr>
 map <C-S-tab> :tabprevious<cr>
+nmap <D-k> :NERDTree<cr>
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'

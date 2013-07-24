@@ -18,9 +18,8 @@ set lines=60
 " " GUI Option to remove the Toolbar (T)
 set guioptions-=T
 "
-" " Sets the font and size
-"set guifont=Bitstream\ Vera\ Sans\ Mono:h12
-"
 " " Sets the percent transparency
 set transparency=4
+
+map <D-b> :NERDTreeToggle<cr>
 
