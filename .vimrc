@@ -17,6 +17,10 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/powerline'
 
 
 "Turn the syntax on.
