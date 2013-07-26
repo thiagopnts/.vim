@@ -14,10 +14,6 @@ augroup END
 "Turn the syntax on.
 syntax on
 
-"Init pathogen plugin. Pathogen helps to manage others plugins.
-call pathogen#infect()
-call pathogen#helptags()
-
 set modelines=0
 
 set tabstop=2
