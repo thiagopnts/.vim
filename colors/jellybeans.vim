@@ -444,6 +444,8 @@ if !s:low_color
   hi DiffChange ctermbg=17
   hi DiffText ctermbg=19
 endif
+hi! CursorLineNr gui=bold guifg=white
+
 
 " delete functions {{{
 delf s:X
