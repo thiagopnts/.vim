@@ -11,16 +11,40 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
-"Setup Vundle.
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
+" Setup Vundle.
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Plugins list.
+Bundle 'vim-scripts/ctags.vim'
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'Lokaltog/powerline'
+Bundle 'tpope/vim-surround'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+Bundle "tpope/vim-rails"
+Bundle "Townk/vim-autoclose"
 
 
 "Turn the syntax on.
@@ -96,7 +120,7 @@ au FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType ruby set omnifunc=rubycomplete#CompleteCSS
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType scala set omnifunc=scalacomplete#Complete
 
