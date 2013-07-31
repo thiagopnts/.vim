@@ -1,43 +1,38 @@
+"
+" My .vimrc file
+" Maintained by Thiago Pontes <thiagopnts@gmail.com>
+"
+" To start vim without using this .vimrc file, use:
+"     vim -u NORC
+"
+" To start vim without loading any .vimrc or plugins, use:
+"     vim -u NONE
+"
+
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
 
-if has("gui_running")
-    set guifont=Monaco:h12
-endif
 
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
-autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
-function! s:CloseIfOnlyNerdTreeLeft()
-  if exists("t:NERDTreeBufName")
-    if bufwinnr(t:NERDTreeBufName) != -1
-      if winnr("$") == 1
-        q
-      endif
-    endif
-  endif
-endfunction
-
 " Setup Vundle.
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Plugins list.
-Bundle 'vim-scripts/ctags.vim'
 Bundle 'gmarik/vundle'
+
+set guifont=Monaco\ for\ Powerline:h12
+
+" Plugins list.
+Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/powerline'
 Bundle 'tpope/vim-surround'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -45,6 +40,10 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-rails"
 Bundle "Townk/vim-autoclose"
+Bundle "Lokaltog/vim-powerline"
+Bundle "scrooloose/nerdtree"
+Bundle "vim-scripts/ruby-matchit"
+Bundle "nathanaelkane/vim-indent-guides"
 
 
 "Turn the syntax on.
@@ -54,18 +53,20 @@ set modelines=0
 
 set tabstop=2
 set shiftwidth=2
+set shiftround
 set softtabstop=2
 set number
 set expandtab
 
-set encoding=utf-8
 set scrolloff=3
-"set autoindent
+set autoindent
+set copyindent
 set hidden
 set wildmenu
 set wildmode=list:longest
 set backspace=indent,eol,start
 set laststatus=2
+set hlsearch
 
 "Turn on the Jellybeans color scheme.
 colorscheme jellybeans
@@ -79,7 +80,10 @@ filetype off
 "Auto open with NERDTree
 "au VimEnter * NERDTree
 
+map <c-k> :NERDTreeToggle
+
 set modelines=0
+filetype plugin on
 filetype plugin indent on
 set ts=4
 set sw=4
@@ -99,32 +103,25 @@ nnoremap <tab> %
 vnoremap <tab> %
 set ignorecase
 set smartcase
+set nobackup "no backup
+set noswapfile "no swp files
+set mouse=a
 
 "Some shortcuts to navigate between tabs.
 "ctrl+t to open a new tab,
 "ctrl+tab to go to the next tab,
 "ctrl+shift+tab to go to the previous tab.
-map <C-n> :tabnew<cr>
+map <C-n> :tabnew .<cr>
 map <c-tab> :tabnext<cr>
 map <C-S-tab> :tabprevious<cr>
-nmap <D-k> :NERDTree<cr>
+
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
 
 "powerline
-set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
-
-"Auto completion stuff.
-au FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType ruby set omnifunc=rubycomplete#Complete
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType scala set omnifunc=scalacomplete#Complete
-
-map <leader>t :FuzzyFinderTextMate<CR>
+"set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
+let g:Powerline_symbols = 'fancy'
 
 inoremap <C-space> <C-x><C-o>
 
@@ -144,6 +141,3 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-"autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-

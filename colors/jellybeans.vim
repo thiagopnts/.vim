@@ -342,7 +342,7 @@ call s:X("NonText","606060","151515","","Black","")
 
 call s:X("SpecialKey","444444","1c1c1c","","Black","")
 
-call s:X("Search","f0a0c0","302028","underline","Magenta","")
+call s:X("Search","f0a0c0","302028","", "DarkGreen","")
 
 call s:X("Directory","dad085","","","Yellow","")
 call s:X("ErrorMsg","","902020","","","DarkRed")

@@ -19,7 +19,6 @@ set lines=60
 set guioptions-=T
 "
 " " Sets the percent transparency
-set transparency=4
+"set transparency=4
 
-map <D-b> :NERDTreeToggle<cr>
 
