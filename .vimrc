@@ -9,6 +9,11 @@
 "     vim -u NONE
 "
 
+set nocompatible
+
+filetype off
+
+" Enables switch to visual mode when holding shift when using macvim
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 endif
@@ -23,9 +28,10 @@ augroup END
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Uses vundle to manage vundle
 Bundle 'gmarik/vundle'
 
-set guifont=Monaco\ for\ Powerline:h12
+set guifont=Monaco\ for\ Powerline:h12 " Monaco font patched for Powerline plugin
 
 " Plugins list.
 Bundle 'jnwhiteh/vim-golang'
@@ -46,78 +52,80 @@ Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
 
 
-"Turn the syntax on.
-syntax on
+syntax on " Turn the syntax on.
 
-set modelines=0
-
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set softtabstop=2
-set number
-set expandtab
-
-set scrolloff=3
-set autoindent
-set copyindent
-set hidden
-set wildmenu
-set wildmode=list:longest
-set backspace=indent,eol,start
-set laststatus=2
-set hlsearch
-
-"Turn on the Jellybeans color scheme.
-colorscheme jellybeans
-"colorscheme Monokai
-
-"Turn on line numbers
-set number
-
-filetype off
-
-"Auto open with NERDTree
-"au VimEnter * NERDTree
-
-map <c-k> :NERDTreeToggle
-
-set modelines=0
-filetype plugin on
-filetype plugin indent on
-set ts=4
-set sw=4
-set autoindent
+set tabstop=2                  " A tab is 2 spaces
+set shiftwidth=2               " Number of spaces used for autoindenting
+set shiftround                 " Use multiple of shiftwidth when indenting with '<' and '>'
+set softtabstop=2              " when hitting <BS>, pretend like a tab is removed, even if spaces
+set number                     " Show line numbers
+set expandtab                  " Expand tabs by default (overloadable per file type later)
+set scrolloff=3                " Keep 3 lines off the edges of the screen when scrolling
+set autoindent                 " Enables auto indentation
+set copyindent                 " Uses the previous indentation on autoindenting
+set hidden                     " Keeps buffers hidded instead of closing them
+set showmatch                  " Shows match parenthesis
+set ignorecase                 " Ignore case when searching
+set smartcase                  " Only ignores if all letters are lowercase
+set smarttab                   " insert tabs on the start of a line according to shiftwidth, not tabstop
+set wildmenu                   " make tab completion for files/buffers act like bash
+set wildmode=list:full         " Show a list when pressing tab and complete
+set title                      " Change the terminal's title 
+filetype plugin indent on      " Enable detection, plugins and indenting in one step
+set backspace=indent,eol,start " Allow backspacing over everything in insert mode
+set hlsearch                   " Highlight search terms
+set visualbell                 " Don't beep
+set noerrorbells               " Don't beep
+set nobackup                   " No backup
+set noswapfile                 " No swp files
+set lazyredraw                 " Don't update the display while executing macros
+set laststatus=2               " Always put a status line in, even if there is only one window
+set showmode                   " Shows the mode you currently in
+set nowrap                     " Don't wrap lines
+set cursorline                 " Underline the current line, for quick orientation
+set guioptions-=m              "remove menu bar
+set guioptions-=T              "remove toolbar
+set wildignore=*.swp,*.bak,*.pyc,*.class
 set smartindent
-set nocompatible
 set encoding=utf-8
-set showmode
-set showcmd
-set cursorline
+set termencoding=utf-8
 set ttyfast
 set ruler
-set showmatch
-set guioptions-=m "remove menu bar
-set guioptions-=T "remove toolbar
+
+
+colorscheme jellybeans "Turn on the Jellybeans color scheme.
+"colorscheme Monokai
+
+"au VimEnter * NERDTree "Auto open with NERDTree
+
+" Toggle NERDTree
+map <D-k> :NERDTreeToggle <cr>
+
+" Clear search history
+nnoremap // :nohlsearch<CR>
+" Save with sudo
+cnoremap w!! w !sudo tee % >/dev/null
+
+filetype plugin on
+
+"set showcmd " Show (partial) command in the last line of the screen
 nnoremap <tab> %
 vnoremap <tab> %
-set ignorecase
-set smartcase
-set nobackup "no backup
-set noswapfile "no swp files
 set mouse=a
 
 "Some shortcuts to navigate between tabs.
 "ctrl+t to open a new tab,
+map <C-n> :tabnew .<cr>
 "ctrl+tab to go to the next tab,
 "ctrl+shift+tab to go to the previous tab.
-map <C-n> :tabnew .<cr>
 map <c-tab> :tabnext<cr>
 map <C-S-tab> :tabprevious<cr>
 
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
+" Use brew's ctags
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 "powerline
 "set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
