@@ -83,8 +83,9 @@ set laststatus=2               " Always put a status line in, even if there is o
 set showmode                   " Shows the mode you currently in
 set nowrap                     " Don't wrap lines
 set cursorline                 " Underline the current line, for quick orientation
-set guioptions-=m              "remove menu bar
-set guioptions-=T              "remove toolbar
+set guioptions-=m              "Remove menu bar
+set guioptions-=T              "Remove toolbar
+set guioptions-=r              "Remove scrollbar
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set smartindent
 set encoding=utf-8
