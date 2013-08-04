@@ -9,9 +9,7 @@
 "     vim -u NONE
 "
 
-set nocompatible
 
-filetype off
 
 " Enables switch to visual mode when holding shift when using macvim
 if has("gui_macvim")
@@ -23,6 +21,7 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
 
 " Setup Vundle.
 set rtp+=~/.vim/bundle/vundle/
@@ -51,6 +50,8 @@ Bundle "scrooloose/nerdtree"
 Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
 
+set nocompatible
+filetype off
 
 syntax on " Turn the syntax on.
 
@@ -68,8 +69,8 @@ set showmatch                  " Shows match parenthesis
 set ignorecase                 " Ignore case when searching
 set smartcase                  " Only ignores if all letters are lowercase
 set smarttab                   " insert tabs on the start of a line according to shiftwidth, not tabstop
-set wildmenu                   " make tab completion for files/buffers act like bash
-set wildmode=list:full         " Show a list when pressing tab and complete
+"set wildmenu                   " make tab completion for files/buffers act like bash
+set wildmode=list:longest         " Show a list when pressing tab and complete
 set title                      " Change the terminal's title 
 filetype plugin indent on      " Enable detection, plugins and indenting in one step
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
@@ -83,15 +84,17 @@ set laststatus=2               " Always put a status line in, even if there is o
 set showmode                   " Shows the mode you currently in
 set nowrap                     " Don't wrap lines
 set cursorline                 " Underline the current line, for quick orientation
-set guioptions-=m              "Remove menu bar
-set guioptions-=T              "Remove toolbar
-set guioptions-=r              "Remove scrollbar
+set guioptions+=LlRrbmT
+set guioptions-=LlRrbmT
+"set guioptions-=m              "Remove menu bar
+"set guioptions-=T              "Remove toolbar
+"set guioptions-=r              "Remove scrollbar
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set smartindent
 set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
-set ruler
+"set ruler
 
 
 colorscheme jellybeans "Turn on the Jellybeans color scheme.
@@ -110,8 +113,6 @@ cnoremap w!! w !sudo tee % >/dev/null
 filetype plugin on
 
 "set showcmd " Show (partial) command in the last line of the screen
-nnoremap <tab> %
-vnoremap <tab> %
 set mouse=a
 
 "Some shortcuts to navigate between tabs.
