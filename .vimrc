@@ -49,6 +49,7 @@ Bundle "Lokaltog/vim-powerline"
 Bundle "scrooloose/nerdtree"
 Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
+Bundle "kchmck/vim-coffee-script"
 
 set nocompatible
 filetype off
@@ -97,8 +98,9 @@ set ttyfast
 "set ruler
 
 
-colorscheme jellybeans "Turn on the Jellybeans color scheme.
+"colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
+colorscheme grb256
 
 "au VimEnter * NERDTree "Auto open with NERDTree
 
