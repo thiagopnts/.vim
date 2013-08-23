@@ -98,9 +98,9 @@ set ttyfast
 "set ruler
 
 
-"colorscheme jellybeans "Turn on the Jellybeans color scheme.
+colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
-colorscheme grb256
+"colorscheme grb256
 
 "au VimEnter * NERDTree "Auto open with NERDTree
 
