@@ -50,6 +50,7 @@ Bundle "scrooloose/nerdtree"
 Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
 Bundle "kchmck/vim-coffee-script"
+Bundle "tpop/vim-rails"
 
 set nocompatible
 filetype off
