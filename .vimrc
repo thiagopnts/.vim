@@ -12,10 +12,6 @@
 
 
 " Enables switch to visual mode when holding shift when using macvim
-if has("gui_macvim")
-    let macvim_hig_shift_movement = 1
-endif
-
 
 augroup myvimrc
     au!
@@ -30,7 +26,7 @@ call vundle#rc()
 " Uses vundle to manage vundle
 Bundle 'gmarik/vundle'
 
-set guifont=Monaco\ for\ Powerline:h12 " Monaco font patched for Powerline plugin
+set guifont=Monaco:h12 " Monaco font patched for Powerline plugin
 
 " Plugins list.
 Bundle 'jnwhiteh/vim-golang'
@@ -45,7 +41,6 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "tpope/vim-rails"
 Bundle "Townk/vim-autoclose"
-Bundle "Lokaltog/vim-powerline"
 Bundle "scrooloose/nerdtree"
 Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
@@ -123,14 +118,15 @@ set mouse=a
 map <C-n> :tabnew .<cr>
 "ctrl+tab to go to the next tab,
 "ctrl+shift+tab to go to the previous tab.
-map <c-tab> :tabnext<cr>
-map <C-S-tab> :tabprevious<cr>
+"map <c-tab> :tabnext<cr>
+"map <C-S-tab> :tabprevious<cr>
 
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+set t_Co=256
 
 "powerline
 "set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
