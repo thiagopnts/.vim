@@ -48,7 +48,6 @@ Bundle "kchmck/vim-coffee-script"
 Bundle "tpop/vim-rails"
 
 set nocompatible
-filetype off
 
 syntax on " Turn the syntax on.
 
