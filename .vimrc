@@ -102,6 +102,11 @@ colorscheme jellybeans "Turn on the Jellybeans color scheme.
 " Toggle NERDTree
 map <D-k> :NERDTreeToggle <cr>
 
+" Change Leader key to ,
+let mapleader = ','
+" BLAME IT HAHA
+vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<")<CR>,<C-R>=line("'>") <CR>p <CR>
+
 " Clear search history
 nnoremap // :nohlsearch<CR>
 " Save with sudo
