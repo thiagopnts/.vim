@@ -46,6 +46,7 @@ Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
 Bundle "kchmck/vim-coffee-script"
 Bundle "tpop/vim-rails"
+Bundle 'rking/ag.vim'
 
 set nocompatible
 
