@@ -47,6 +47,7 @@ Bundle "nathanaelkane/vim-indent-guides"
 Bundle "kchmck/vim-coffee-script"
 Bundle "tpop/vim-rails"
 Bundle 'rking/ag.vim'
+Bundle "digitaltoad/vim-jade"
 
 set nocompatible
 
@@ -86,11 +87,12 @@ set guioptions-=LlRrbmT
 "set guioptions-=m              "Remove menu bar
 "set guioptions-=T              "Remove toolbar
 "set guioptions-=r              "Remove scrollbar
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*.class,coverage,*.csv
 set smartindent
 set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
+set shell=/bin/sh
 "set ruler
 
 
@@ -129,6 +131,8 @@ map <C-n> :tabnew .<cr>
 
 "ctrl p
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage$'
+
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 set t_Co=256
