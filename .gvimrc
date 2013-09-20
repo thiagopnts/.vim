@@ -6,9 +6,6 @@
 " " Turn on line numbers
 set number
 "
-" " Change colorscheme
-colorscheme jellybeans
-"
 " " Turns on the tab bar always
 set showtabline=2
 "
