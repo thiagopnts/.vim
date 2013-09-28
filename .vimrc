@@ -48,6 +48,7 @@ Bundle "kchmck/vim-coffee-script"
 Bundle "tpop/vim-rails"
 Bundle 'rking/ag.vim'
 Bundle "digitaltoad/vim-jade"
+Bundle "wting/rust.vim"
 
 set nocompatible
 
