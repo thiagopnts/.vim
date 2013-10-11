@@ -51,6 +51,7 @@ Bundle "digitaltoad/vim-jade"
 Bundle "wting/rust.vim"
 Bundle "nono/vim-handlebars"
 Bundle "bkad/CamelCaseMotion"
+Bundle "rodjek/vim-puppet"
 
 set nocompatible
 
