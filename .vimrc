@@ -49,6 +49,8 @@ Bundle "tpop/vim-rails"
 Bundle 'rking/ag.vim'
 Bundle "digitaltoad/vim-jade"
 Bundle "wting/rust.vim"
+Bundle "nono/vim-handlebars"
+Bundle "bkad/CamelCaseMotion"
 
 set nocompatible
 
