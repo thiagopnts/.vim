@@ -52,6 +52,7 @@ Bundle "wting/rust.vim"
 Bundle "nono/vim-handlebars"
 Bundle "bkad/CamelCaseMotion"
 Bundle "rodjek/vim-puppet"
+Bundle "triglav/vim-visual-increment"
 
 set nocompatible
 
