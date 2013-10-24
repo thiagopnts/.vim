@@ -53,6 +53,7 @@ Bundle "nono/vim-handlebars"
 Bundle "bkad/CamelCaseMotion"
 Bundle "rodjek/vim-puppet"
 Bundle "triglav/vim-visual-increment"
+Bundle "derekwyatt/vim-scala"
 
 set nocompatible
 
