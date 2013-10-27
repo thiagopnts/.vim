@@ -120,7 +120,6 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 nnoremap // :nohlsearch<CR>
 " Save with sudo
 cnoremap w!! w !sudo tee % >/dev/null
-:command Gshame Gblame
 filetype plugin on
 
 "set showcmd " Show (partial) command in the last line of the screen
