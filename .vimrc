@@ -54,6 +54,8 @@ Bundle "bkad/CamelCaseMotion"
 Bundle "rodjek/vim-puppet"
 Bundle "triglav/vim-visual-increment"
 Bundle "derekwyatt/vim-scala"
+Bundle "pangloss/vim-javascript"
+Bundle "dsawardekar/ember.vim"
 
 set nocompatible
 
@@ -102,6 +104,7 @@ set shell=/bin/sh
 "set ruler
 
 
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
