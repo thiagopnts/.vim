@@ -56,6 +56,12 @@ Bundle "triglav/vim-visual-increment"
 Bundle "derekwyatt/vim-scala"
 Bundle "pangloss/vim-javascript"
 Bundle "dsawardekar/ember.vim"
+"Bundle "bling/vim-airline"
+Bundle 'itchyny/lightline.vim'
+
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 set nocompatible
 
