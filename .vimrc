@@ -9,15 +9,12 @@
 "     vim -u NONE
 "
 
-
-
 " Enables switch to visual mode when holding shift when using macvim
 
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
 
 " Setup Vundle.
 set rtp+=~/.vim/bundle/vundle/
@@ -26,7 +23,7 @@ call vundle#rc()
 " Uses vundle to manage vundle
 Bundle 'gmarik/vundle'
 
-set guifont=Monaco:h12 " Monaco font patched for Powerline plugin
+set guifont=Monaco:h12
 
 " Plugins list.
 Bundle 'jnwhiteh/vim-golang'
@@ -56,7 +53,6 @@ Bundle "triglav/vim-visual-increment"
 Bundle "derekwyatt/vim-scala"
 Bundle "pangloss/vim-javascript"
 Bundle "dsawardekar/ember.vim"
-"Bundle "bling/vim-airline"
 Bundle 'itchyny/lightline.vim'
 Bundle 'mattn/emmet-vim'
 
@@ -156,10 +152,6 @@ let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage$'
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 set t_Co=256
-
-"powerline
-"set rtp+=/Users/thiago.pontes/.vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
 
 inoremap <C-space> <C-x><C-o>
 
