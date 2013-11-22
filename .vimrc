@@ -58,6 +58,7 @@ Bundle "pangloss/vim-javascript"
 Bundle "dsawardekar/ember.vim"
 "Bundle "bling/vim-airline"
 Bundle 'itchyny/lightline.vim'
+Bundle 'mattn/emmet-vim'
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -111,6 +112,8 @@ set shell=/bin/sh
 
 
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_javascript_checkers = ['jsl']
+
 colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
@@ -137,6 +140,9 @@ set mouse=a
 "Some shortcuts to navigate between tabs.
 "ctrl+t to open a new tab,
 map <C-n> :tabnew .<cr>
+
+" Change default binds from emmet
+imap hh <C-y>,
 "ctrl+tab to go to the next tab,
 "ctrl+shift+tab to go to the previous tab.
 "map <c-tab> :tabnext<cr>
