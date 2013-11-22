@@ -55,6 +55,7 @@ Bundle "pangloss/vim-javascript"
 Bundle "dsawardekar/ember.vim"
 Bundle 'itchyny/lightline.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'timcharper/textile.vim'
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
