@@ -9,8 +9,6 @@
 "     vim -u NONE
 "
 
-" Enables switch to visual mode when holding shift when using macvim
-
 augroup myvimrc
     au!
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
@@ -30,7 +28,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic' "it runs a lint on save, beware.
 Bundle 'tpope/vim-surround'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -39,23 +37,19 @@ Bundle "honza/vim-snippets"
 Bundle "tpope/vim-rails"
 Bundle "Townk/vim-autoclose"
 Bundle "scrooloose/nerdtree"
-Bundle "vim-scripts/ruby-matchit"
 Bundle "nathanaelkane/vim-indent-guides"
 Bundle "kchmck/vim-coffee-script"
-Bundle "tpop/vim-rails"
 Bundle 'rking/ag.vim'
 Bundle "digitaltoad/vim-jade"
 Bundle "wting/rust.vim"
 Bundle "nono/vim-handlebars"
 Bundle "bkad/CamelCaseMotion"
 Bundle "rodjek/vim-puppet"
-Bundle "triglav/vim-visual-increment"
 Bundle "derekwyatt/vim-scala"
 Bundle "pangloss/vim-javascript"
-Bundle "dsawardekar/ember.vim"
 Bundle 'itchyny/lightline.vim'
-Bundle 'mattn/emmet-vim'
 Bundle 'timcharper/textile.vim'
+Bundle 'jeroenbourgois/vim-actionscript'
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
@@ -63,7 +57,7 @@ let g:lightline = {
 
 set nocompatible
 
-syntax on " Turn the syntax on.
+syntax on                      " Turn the syntax on.
 
 set tabstop=2                  " A tab is 2 spaces
 set shiftwidth=2               " Number of spaces used for autoindenting
@@ -79,8 +73,8 @@ set showmatch                  " Shows match parenthesis
 set ignorecase                 " Ignore case when searching
 set smartcase                  " Only ignores if all letters are lowercase
 set smarttab                   " insert tabs on the start of a line according to shiftwidth, not tabstop
-"set wildmenu                   " make tab completion for files/buffers act like bash
-set wildmode=list:longest         " Show a list when pressing tab and complete
+"set wildmenu                  " make tab completion for files/buffers act like bash
+set wildmode=list:longest      " Show a list when pressing tab and complete
 set title                      " Change the terminal's title 
 filetype plugin indent on      " Enable detection, plugins and indenting in one step
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
@@ -107,27 +101,30 @@ set ttyfast
 set shell=/bin/sh
 "set ruler
 
-
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-let g:syntastic_javascript_checkers = ['jsl']
+" syntastic plugin configs, uncomment when using it. TODO: improve settings to
+" avoid linting 'heavy' languages or with a custom command instead of save
+"let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+"let g:syntastic_javascript_checkers = ['jsl']
 
 colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
 
-"au VimEnter * NERDTree "Auto open with NERDTree
+"au VimEnter * NERDTree        "Auto open with NERDTree
 
-" Toggle NERDTree
+" Toggle NERDTree with command+K
 map <D-k> :NERDTreeToggle <cr>
 
 " Change Leader key to ,
 let mapleader = ','
-" BLAME IT HAHA
+
+" git blame on the selected lines 
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<")<CR>,<C-R>=line("'>") <CR>p <CR>
 
 " Clear search history
 nnoremap // :nohlsearch<CR>
-" Save with sudo
+
+" Save with sudo, maybe change it later.
 cnoremap w!! w !sudo tee % >/dev/null
 filetype plugin on
 
@@ -146,9 +143,9 @@ imap hh <C-y>,
 "map <C-S-tab> :tabprevious<cr>
 
 
-"ctrl p
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage$'
+"ctrl-p plugin settings
+let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to open file fuzzy
+let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage$' " dont index some file types
 
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
