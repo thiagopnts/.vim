@@ -145,7 +145,7 @@ imap hh <C-y>,
 
 "ctrl-p plugin settings
 let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to open file fuzzy
-let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage$' " dont index some file types
+let g:ctrlp_custom_ignore = '\v(\.(exe|so|dll|csv))|coverage|node_modules$' " dont index some file types
 
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
