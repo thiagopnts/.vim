@@ -24,7 +24,7 @@ Bundle 'gmarik/vundle'
 set guifont=Monaco:h12
 
 " Plugins list.
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fsouza/go.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
@@ -50,6 +50,7 @@ Bundle "pangloss/vim-javascript"
 Bundle 'itchyny/lightline.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'jeroenbourgois/vim-actionscript'
+Bundle 'nsf/gocode'
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
