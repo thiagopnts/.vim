@@ -51,6 +51,7 @@ Bundle 'itchyny/lightline.vim'
 Bundle 'timcharper/textile.vim'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'nsf/gocode'
+Bundle 'christoomey/vim-tmux-navigator'
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
