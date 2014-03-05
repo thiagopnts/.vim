@@ -3,7 +3,8 @@
 To use it:
 
 `git clone git@github.com:thiagopnts/.vim.git ~`
-`ln -s ~/.vim/.vimrc ~/.vimrc`
+
+`ln -s ~/.vim/vimrc ~/.vimrc`
 
 then install the plugins:
 
