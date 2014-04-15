@@ -24,7 +24,6 @@ Bundle 'gmarik/vundle'
 set guifont=Monaco:h12
 
 " Plugins list.
-Bundle 'fsouza/go.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
@@ -39,18 +38,13 @@ Bundle "Townk/vim-autoclose"
 Bundle "scrooloose/nerdtree"
 Bundle "nathanaelkane/vim-indent-guides"
 Bundle "kchmck/vim-coffee-script"
-Bundle 'rking/ag.vim'
 Bundle "digitaltoad/vim-jade"
 Bundle "wting/rust.vim"
 Bundle "nono/vim-handlebars"
 Bundle "bkad/CamelCaseMotion"
-Bundle "rodjek/vim-puppet"
-Bundle "derekwyatt/vim-scala"
-Bundle "pangloss/vim-javascript"
+"Bundle "pangloss/vim-javascript"
 Bundle 'itchyny/lightline.vim'
-Bundle 'timcharper/textile.vim'
 Bundle 'jeroenbourgois/vim-actionscript'
-Bundle 'nsf/gocode'
 Bundle 'christoomey/vim-tmux-navigator'
 
 let g:lightline = {
@@ -110,13 +104,14 @@ set shell=/bin/sh
 
 colorscheme hybrid
 "colorscheme jellybeans "Turn on the Jellybeans color scheme.
+"colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
 
 "au VimEnter * NERDTree        "Auto open with NERDTree
 
 " Toggle NERDTree with command+K
-map <D-k> :NERDTreeToggle <cr>
+nnoremap <D-k> :NERDTreeToggle <cr>
 
 " Change Leader key to ,
 let mapleader = ','
@@ -126,6 +121,8 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 
 " Clear search history
 nnoremap // :nohlsearch<CR>
+
+vnoremap <C-c> "*y"
 
 " Save with sudo, maybe change it later.
 cnoremap sudow w !sudo tee % >/dev/null
@@ -137,6 +134,9 @@ set mouse=a
 "Some shortcuts to navigate between tabs.
 "ctrl+t to open a new tab,
 map <C-n> :tabnew .<cr>
+
+map <c-j> :tabp<cr>
+map <c-k> :tabn<cr>
 
 " Change default binds from emmet
 imap hh <C-y>,
