@@ -108,7 +108,8 @@ set shell=/bin/sh
 "let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 "let g:syntastic_javascript_checkers = ['jsl']
 
-colorscheme jellybeans "Turn on the Jellybeans color scheme.
+colorscheme hybrid
+"colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
 
