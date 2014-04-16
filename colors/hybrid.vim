@@ -78,7 +78,7 @@ let colors_name = "hybrid"
 " ----------------------------------------------------------------------------
 if has("gui_running")
   let s:vmode      = "gui"
-  let s:background = "#1d1f21"
+  let s:background = "#111111"
   let s:foreground = "#c5c8c6"
   let s:selection  = "#373b41"
   let s:line       = "#282a2e"
@@ -102,7 +102,7 @@ if has("gui_running")
   let s:darkpurple = "#5f005f"
 else
   let s:vmode      = "cterm"
-  let s:background = "234"
+  let s:background = "0"
   let s:window     = "236"
   let s:darkcolumn = "234"
   let s:addbg      = "65"
