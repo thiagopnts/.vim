@@ -122,7 +122,10 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 " Clear search history
 nnoremap // :nohlsearch<CR>
 
+set timeoutlen=0
 vnoremap <C-c> "*y"
+
+set timeoutlen=0
 
 " Save with sudo, maybe change it later.
 cnoremap sudow w !sudo tee % >/dev/null
