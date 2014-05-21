@@ -1,0 +1,20 @@
+" vim: filetype=vim
+
+" syntastic plugin configs, uncomment when using it. TODO: improve settings to
+" avoid linting 'heavy' languages or with a custom command instead of save
+"let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+"let g:syntastic_javascript_checkers = ['jsl']
+let g:lightline = {'colorscheme': 'jellybeans'}
+
+colorscheme hybrid
+"colorscheme jellybeans "Turn on the Jellybeans color scheme.
+"colorscheme jellybeans "Turn on the Jellybeans color scheme.
+"colorscheme Monokai
+"colorscheme grb256
+
+"ctrl-p plugin settings
+let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to open file fuzzy
+let g:ctrlp_custom_ignore = '\v(\.(exe|so|swf|swc|dll|csv))|coverage|node_modules$' " dont index some file types
+
+" Use brew's ctags
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
