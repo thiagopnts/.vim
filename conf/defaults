@@ -50,7 +50,7 @@ set guioptions-=LlRrbmT
 "set guioptions-=r              "Remove scrollbar
 
 " set the colors when using terminal commands
-set noguipty
+"set noguipty
 " command-line completion shows a list of matches
 set wmnu
 
