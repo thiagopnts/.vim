@@ -1,7 +1,7 @@
 " vim: filetype=vim
 
 " Toggle NERDTree with command+K
-nnoremap <D-k> :NERDTreeToggle <cr>
+nnoremap ˚ :NERDTreeToggle <cr>
 
 " Change Leader key to ,
 let mapleader = ','
