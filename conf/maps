@@ -21,6 +21,13 @@ map <C-n> :tabnew .<cr>
 map <c-j> :tabp<cr>
 map <c-k> :tabn<cr>
 
+" Buffer navigation. This is a hack, specific for OSX. it's equivalent to
+" alt + ] to bn and alt + [ to bp
+map ‘ :bn<cr>
+map “ :bp<cr>
+map <M-]> :bn<cr>
+map <M-[> :bp<cr>
+
 " Change default binds from emmet
 imap hh <C-y>,
 "ctrl+tab to go to the next tab,
