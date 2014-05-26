@@ -31,6 +31,14 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
 
+Plugin 'sjl/badwolf'
+Plugin 'quanganhdo/grb256'
 Plugin 'baskerville/bubblegum'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'vim-scripts/candy.vim'
 
 call vundle#end()  
