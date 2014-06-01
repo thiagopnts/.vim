@@ -35,7 +35,15 @@ imap hh <C-y>,
 "map <c-tab> :tabnext<cr>
 "map <C-S-tab> :tabprevious<cr>
 
-inoremap <C-space> <C-x><C-o>
+" Ctrl-Space for completions. Heck Yeah!
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+
 " Save with sudo, maybe change it later.
 cnoremap sudow w !sudo tee % >/dev/null
 
