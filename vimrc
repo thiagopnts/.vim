@@ -9,13 +9,13 @@
 "     vim -u NONE
 "
 
-source $HOME/.vim/conf/bootstrap
+source $HOME/.vim/config/bootstrap.vim
 
-source $HOME/.vim/conf/plugins
+source $HOME/.vim/config/plugins.vim
 
-source $HOME/.vim/conf/defaults
+source $HOME/.vim/config/defaults.vim
 
-source $HOME/.vim/conf/configs
+source $HOME/.vim/config/configs.vim
 
-source $HOME/.vim/conf/maps
+source $HOME/.vim/config/maps.vim
 
