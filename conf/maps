@@ -15,11 +15,17 @@ nnoremap // :nohlsearch<CR>
 vnoremap <C-c> "*y"
 
 "Some shortcuts to navigate between tabs.
-"ctrl+t to open a new tab,
-map <C-n> :tabnew .<cr>
 
-map <c-j> :tabp<cr>
-map <c-k> :tabn<cr>
+"ctrl+t to open a new tab,
+map <C-t> :tabnew .<cr>
+
+"alt+shift+[ previous tab
+map ” :tabp<cr>
+map <m-S-[> :tabp<cr>
+
+"alt+shift+] next tab
+map <m-S-]> :tabn<cr>
+map ’ :tabn<cr>
 
 " Buffer navigation. This is a hack, specific for OSX. it's equivalent to
 " alt + ] to bn and alt + [ to bp
@@ -27,6 +33,7 @@ map ‘ :bn<cr>
 map “ :bp<cr>
 map <M-]> :bn<cr>
 map <M-[> :bp<cr>
+map <D-s> :w<cr>
 
 " Change default binds from emmet
 imap hh <C-y>,
