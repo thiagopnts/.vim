@@ -31,6 +31,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'sjl/badwolf'
 Plugin 'quanganhdo/grb256'
