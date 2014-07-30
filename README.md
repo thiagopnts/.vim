@@ -4,7 +4,7 @@
 
 To use it:
 
-`git clone git@github.com:thiagopnts/.vim.git ~`
+`git clone --recursive git@github.com:thiagopnts/.vim.git ~`
 
 `ln -s ~/.vim/vimrc ~/.vimrc`
 
