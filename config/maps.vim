@@ -1,6 +1,6 @@
 " vim: filetype=vim
 
-" Toggle NERDTree with command+K
+" Toggle NERDTree with alt + K
 nnoremap ˚ :NERDTreeToggle <cr>
 
 " Change Leader key to ,
