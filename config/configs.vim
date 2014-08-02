@@ -4,10 +4,16 @@
 " avoid linting 'heavy' languages or with a custom command instead of save
 "let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 "let g:syntastic_javascript_checkers = ['jsl']
-let g:lightline = {'colorscheme': 'jellybeans'}
+
+" Settings for lightline, which I'm not using anymore
+" let g:lightline = {'colorscheme': 'jellybeans'}
+
+" Enable powerline symbols
+let g:airline_powerline_fonts = 1
+" Enable buffer list
+let g:airline#extensions#tabline#enabled = 1
 
 colorscheme hybrid
-"colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256

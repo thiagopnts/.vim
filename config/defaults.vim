@@ -19,7 +19,7 @@ set smartcase                  " Only ignores if all letters are lowercase
 set smarttab                   " insert tabs on the start of a line according to shiftwidth, not tabstop
 "set wildmenu                  " make tab completion for files/buffers act like bash
 set wildmode=list:longest      " Show a list when pressing tab and complete
-set title                      " Change the terminal's title 
+set title                      " Change the terminal's title
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
 set hlsearch                   " Highlight search terms
 set visualbell                 " Don't beep
@@ -41,8 +41,7 @@ set shell=/bin/sh
 set t_Co=256
 "set ruler
 
-
-set guifont=Monaco:h12
+set guifont=Monaco\ for\ Powerline:h12
 set guioptions+=LlRrbmT
 set guioptions-=LlRrbmT
 "set guioptions-=m              "Remove menu bar

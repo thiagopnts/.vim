@@ -31,7 +31,8 @@ Plugin 'jeroenbourgois/vim-actionscript'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
-Plugin 'fholgado/minibufexpl.vim'
+" buffer explorer, I'm not using it anymore in favor of airline
+"Plugin 'fholgado/minibufexpl.vim'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'sjl/badwolf'
