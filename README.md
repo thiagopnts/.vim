@@ -4,10 +4,14 @@
 
 To use it:
 
+1 - Clone the repository:
 `git clone --recursive git@github.com:thiagopnts/.vim.git ~`
 
+2 - Link the vimrc to your home:
 `ln -s ~/.vim/vimrc ~/.vimrc`
 
-then install the plugins:
+3 - Install plugins:
+`vim +PluginInstall +qall`
 
-`vim +BundleInstall +qall`
+4 - Profit
+
