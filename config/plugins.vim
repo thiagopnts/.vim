@@ -31,6 +31,7 @@ Plugin 'jeroenbourgois/vim-actionscript'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
+Plugin 'Valloric/YouCompleteMe'
 " buffer explorer, I'm not using it anymore in favor of airline
 "Plugin 'fholgado/minibufexpl.vim'
 Plugin 'airblade/vim-gitgutter'
