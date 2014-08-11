@@ -27,7 +27,7 @@ let g:ctrlp_clear_cache_on_exit = 1
 "
 " disable the annoying auto complete popup as you type
 let g:ycm_auto_trigger = 0
-
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:user_emmet_leader_key='<c-y>'
 
