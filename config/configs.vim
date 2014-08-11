@@ -23,6 +23,11 @@ let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to o
 let g:ctrlp_custom_ignore = '\v(\.(exe|so|swf|swc|dll|csv))|coverage|node_modules$' " dont index some file types
 let g:ctrlp_clear_cache_on_exit = 1
 
+" YCM settings
+"
+" disable the annoying auto complete popup as you type
+let g:ycm_auto_trigger = 0
+
 
 let g:user_emmet_leader_key='<c-y>'
 
