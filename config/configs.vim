@@ -27,9 +27,15 @@ let g:ctrlp_clear_cache_on_exit = 1
 "
 " disable the annoying auto complete popup as you type
 let g:ycm_auto_trigger = 0
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
 let g:user_emmet_leader_key='<c-y>'
 
 " Use brew's ctags
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+
+let g:UltiSnipsExpandTrigger="<c-k>"

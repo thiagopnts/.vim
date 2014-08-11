@@ -12,7 +12,7 @@ Plugin 'scrooloose/syntastic' "it runs a lint on save, beware.
 Plugin 'tpope/vim-surround'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-rails'
