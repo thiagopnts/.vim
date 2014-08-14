@@ -4,6 +4,8 @@
 " avoid linting 'heavy' languages or with a custom command instead of save
 "let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 "let g:syntastic_javascript_checkers = ['jsl']
+let g:syntastic_objc_check_header = 1
+let g:syntastic_objc_compiler = 'clang'
 
 " Settings for lightline, which I'm not using anymore
 " let g:lightline = {'colorscheme': 'jellybeans'}
@@ -17,6 +19,13 @@ colorscheme hybrid
 "colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
+
+" clang_complete settings
+let g:clang_library_path = '/usr/local/lib'
+"let g:clang_snippets = 1
+let g:clang_use_library = 1
+let g:clang_debug = 1
+"let g:clang_snippets_engine = 'ultisnips'
 
 "ctrl-p plugin settings
 let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to open file fuzzy
@@ -38,4 +47,3 @@ let g:user_emmet_leader_key='<c-y>'
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
 
-let g:UltiSnipsExpandTrigger="<c-k>"
