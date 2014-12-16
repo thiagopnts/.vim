@@ -27,6 +27,10 @@ map <m-S-[> :tabp<cr>
 map <m-S-]> :tabn<cr>
 map ’ :tabn<cr>
 
+"alt+w close buffer
+map <m-W> :bd<cr>
+map ∑ :bd<cr>
+
 " Buffer navigation. This is a hack, specific for OSX. it's equivalent to
 " alt + ] to bn and alt + [ to bp
 map ‘ :bn<cr>
