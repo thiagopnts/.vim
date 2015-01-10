@@ -47,6 +47,9 @@ let g:ctrlp_clear_cache_on_exit = 1
 
 let g:user_emmet_leader_key='<c-y>'
 
+" remove trailing whitespace in files on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Use brew's ctags
 "let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
