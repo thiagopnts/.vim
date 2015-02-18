@@ -38,6 +38,7 @@ set encoding=utf-8
 set termencoding=utf-8
 set term=xterm-256color  " for better colorschme rendering
 set ttyfast
+set colorcolumn=90
 set shell=/bin/sh
 set t_Co=256
 "set ruler
