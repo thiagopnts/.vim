@@ -20,7 +20,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kchmck/vim-coffee-script'
 Plug 'digitaltoad/vim-jade'
 Plug 'b4winckler/vim-objc'
-Plug 'wting/rust.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'nono/vim-handlebars'
 Plug 'rizzatti/dash.vim'
 Plug 'bkad/CamelCaseMotion'
@@ -38,5 +38,6 @@ Plug 'Lokaltog/vim-distinguished'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-vividchalk'
 Plug 'vim-scripts/candy.vim'
+Plug 'timonv/vim-cargo'
 
-call plug#end()  
+call plug#end()
