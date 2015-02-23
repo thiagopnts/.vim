@@ -6,6 +6,7 @@
 "let g:syntastic_javascript_checkers = ['jsl']
 "let g:syntastic_objc_check_header = 1
 "let g:syntastic_objc_compiler = 'clang'
+let syntastic_mode_map = { 'passive_filetypes': ['java'] }
 
 " Settings for lightline, which I'm not using anymore
 "let g:lightline = {'colorscheme': 'monokai'}
@@ -17,7 +18,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme = "jellybeans"
 
-colorscheme jellybeans 
+colorscheme jellybeans
 "colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
