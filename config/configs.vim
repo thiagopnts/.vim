@@ -18,7 +18,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme = "jellybeans"
 
-colorscheme jellybeans
+colorscheme hybrid
 "colorscheme jellybeans "Turn on the Jellybeans color scheme.
 "colorscheme Monokai
 "colorscheme grb256
