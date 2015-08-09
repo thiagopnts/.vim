@@ -43,6 +43,10 @@ set shell=/bin/sh
 set t_Co=256
 "set ruler
 
+" resize vim splits inside tmux
+" tmux knows the extended mouse mode
+set ttymouse=xterm2
+
 set guifont=Monaco\ for\ Powerline:h12
 set guioptions+=LlRrbmT
 set guioptions-=LlRrbmT
