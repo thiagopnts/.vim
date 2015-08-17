@@ -5,13 +5,13 @@
 To use it:
 
 1 - Clone the repository:
-`git clone --recursive git@github.com:thiagopnts/.vim.git ~`
+`git clone git@github.com:thiagopnts/.vim.git ~`
 
 2 - Link the vimrc to your home:
 `ln -s ~/.vim/vimrc ~/.vimrc`
 
 3 - Install plugins:
-`vim +PluginInstall +qall`
+`vim +PlugInstall +qall`
 
 4 - Profit
 
