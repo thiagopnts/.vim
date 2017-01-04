@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
+Plug 'ClockworkNet/vim-vcl'
 Plug 'vim-ruby/vim-ruby', { 'on': 'ruby' }
 Plug 'scrooloose/syntastic' "it runs a lint on save, beware.
 Plug 'tpope/vim-surround'
@@ -30,6 +31,7 @@ Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
 Plug 'bling/vim-airline'
 Plug 'jeroenbourgois/vim-actionscript'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
@@ -38,7 +40,6 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-repeat'
 Plug 'rodjek/vim-puppet'
 "Plug 'Rip-Rip/clang_complete'
-Plug '29decibel/codeschool-vim-theme'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tpope/vim-vividchalk'
