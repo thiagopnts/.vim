@@ -6,7 +6,7 @@ nnoremap ˚ :NERDTreeToggle <cr>
 " Change Leader key to ,
 let mapleader = ','
 
-" git blame on the selected lines 
+" git blame on the selected lines
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<")<CR>,<C-R>=line("'>") <CR>p <CR>
 
 " Clear search history
@@ -27,9 +27,10 @@ map <m-S-[> :tabp<cr>
 map <m-S-]> :tabn<cr>
 map ’ :tabn<cr>
 
-"alt+w close buffer
-map <m-W> :bd<cr>
-map ∑ :bd<cr>
+"alt+w close buffer but keep split
+command Bd bp|bd #
+map <m-W> :Bd<cr>
+map ∑ :Bd<cr>
 
 " Buffer navigation. This is a hack, specific for OSX. it's equivalent to
 " alt + ] to bn and alt + [ to bp

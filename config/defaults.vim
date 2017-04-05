@@ -3,10 +3,10 @@
 filetype plugin indent on      " Enable detection, plugins and indenting in one step
 set nocompatible
 syntax on                      " Turn the syntax on
-set tabstop=4                  " A tab is 2 spaces
-set shiftwidth=4              " Number of spaces used for autoindenting
+set tabstop=2                  " A tab is 2 spaces
+set shiftwidth=2              " Number of spaces used for autoindenting
 set shiftround                 " Use multiple of shiftwidth when indenting with '<' and '>'
-set softtabstop=4              " when hitting <BS>, pretend like a tab is removed, even if spaces
+set softtabstop=2              " when hitting <BS>, pretend like a tab is removed, even if spaces
 set number                     " Show line numbers
 set expandtab                  " Expand tabs by default (overloadable per file type later)
 set scrolloff=3                " Keep 3 lines off the edges of the screen when scrolling
@@ -36,7 +36,6 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,coverage,*.csv
 set smartindent
 set encoding=utf-8
 set termencoding=utf-8
-set term=xterm-256color  " for better colorschme rendering
 set ttyfast
 set colorcolumn=90
 set shell=/bin/sh
@@ -45,7 +44,10 @@ set t_Co=256
 
 " resize vim splits inside tmux
 " tmux knows the extended mouse mode
-set ttymouse=xterm2
+if !has('nvim')
+  set term=xterm-256color  " for better colorschme rendering
+  set ttymouse=xterm2
+endif
 
 set guifont=Monaco\ for\ Powerline:h12
 set guioptions+=LlRrbmT

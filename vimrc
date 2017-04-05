@@ -19,3 +19,28 @@ source $HOME/.vim/config/configs.vim
 
 source $HOME/.vim/config/maps.vim
 
+
+"" dein.vim config
+"if &compatible
+"  set nocompatible
+"endif
+"
+"set runtimepath+=/Users/207254/.vim/./repos/github.com/Shougo/dein.vim
+"
+"if dein#load_state('/Users/207254/.vim/.')
+"  call dein#begin('/Users/207254/.vim/.')
+"  call dein#add('/Users/207254/.vim/./repos/github.com/Shougo/dein.vim')
+"
+"  call dein#add('Shougo/neosnippet.vim')
+"  call dein#add('Shougo/neosnippet-snippets')
+"
+"  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+"  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+"
+"  call dein#end()
+"  call dein#save_state()
+"endif
+"
+"filetype plugin indent on
+"syntax enable
+"

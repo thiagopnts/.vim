@@ -3,10 +3,26 @@
 " syntastic plugin configs, uncomment when using it. TODO: improve settings to
 " avoid linting 'heavy' languages or with a custom command instead of save
 "let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-"let g:syntastic_javascript_checkers = ['jsl']
+"let g:syntastic_enable_signs=1
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_style_warning_symbol = '💩'
+"let g:syntastic_syntax_error_symbol = '💩'
+"let g:syntastic_error_symbol ='💩'
+
+"let g:syntastic_error_bg =''
+
 "let g:syntastic_objc_check_header = 1
 "let g:syntastic_objc_compiler = 'clang'
-let syntastic_mode_map = { 'passive_filetypes': ['java'] }
+"let syntastic_mode_map = { 'passive_filetypes': ['java'] }
+
+"let g:syntastic_error_symbol ='⚠️'
+let g:ale_sign_error = emoji#for('poop')
+let g:ale_sign_warning = emoji#for('poop')
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+
+call camelcasemotion#CreateMotionMappings(',')
 
 " Settings for lightline, which I'm not using anymore
 "let g:lightline = {'colorscheme': 'monokai'}
@@ -51,7 +67,11 @@ let g:user_emmet_leader_key='<c-y>'
 " remove trailing whitespace in files on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+let g:deoplete#enable_at_startup = 1
+
 " Use brew's ctags
 "let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 "let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+
+
 
