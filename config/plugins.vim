@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
 Plug 'ClockworkNet/vim-vcl'
-Plug 'vim-ruby/vim-ruby', { 'on': 'ruby' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-emoji'
 Plug 'etdev/vim-hexcolor'
@@ -31,6 +31,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
 Plug 'bling/vim-airline'
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'jeroenbourgois/vim-actionscript'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
