@@ -21,6 +21,8 @@ let g:ale_sign_warning = emoji#for('poop')
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
+" run auto import for go on save
+let g:go_fmt_command = "goimports"
 
 call camelcasemotion#CreateMotionMappings(',')
 
@@ -50,24 +52,23 @@ let g:clang_close_preview = 1
 
 "ctrl-p plugin settings
 let g:ctrlp_map = '<c-p>'                                      " set ctrl+p to open file fuzzy
-let g:ctrlp_custom_ignore = '\v(\.(exe|so|swf|swc|dll|csv))|coverage|node_modules$' " dont index some file types
+let g:ctrlp_custom_ignore = '\v(\.(exe|so|swf|swc|dll|csv))|coverage|node_modules|vendor$' " dont index some file types
 let g:ctrlp_clear_cache_on_exit = 1
 
 " YCM settings
 "
 " disable the annoying auto complete popup as you type
-" let g:ycm_auto_trigger = 0
 " let g:ycm_enable_diagnostic_signs = 0
 " let g:ycm_collect_identifiers_from_tags_files = 1
 " let g:ycm_key_list_select_completion=[]
 " let g:ycm_key_list_previous_completion=[]
+let g:ycm_auto_trigger = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:user_emmet_leader_key='<c-y>'
 
 " remove trailing whitespace in files on save
 autocmd BufWritePre * :%s/\s\+$//e
-
-let g:deoplete#enable_at_startup = 1
 
 " Use brew's ctags
 "let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'

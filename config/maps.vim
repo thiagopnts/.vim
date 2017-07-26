@@ -19,6 +19,7 @@ vnoremap <C-c> "*y"
 "ctrl+t to open a new tab,
 map <C-t> :tabnew .<cr>
 
+
 "alt+shift+[ previous tab
 map ” :tabp<cr>
 map <m-S-[> :tabp<cr>
@@ -39,6 +40,7 @@ map “ :bp<cr>
 map <M-]> :bn<cr>
 map <M-[> :bp<cr>
 map <D-s> :w<cr>
+map <C-s> :w<cr>
 
 " Change default binds from emmet
 imap hh <C-y>,
