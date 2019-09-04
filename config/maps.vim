@@ -9,6 +9,9 @@ let mapleader = ','
 " git blame on the selected lines
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<")<CR>,<C-R>=line("'>") <CR>p <CR>
 
+
+nnoremap <c-p> :FZF<cr>
+
 " Clear search history
 nnoremap // :nohlsearch<CR>
 

@@ -3,8 +3,15 @@ call plug#begin('~/.vim/plugged')
 
 " Uses vundle to manage vundle
 
+Plug 'dag/vim-fish'
+Plug 'wsdjeg/FlyGrep.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'tell-k/vim-autopep8'
 Plug 'tpope/vim-fugitive'
-Plug 'kien/ctrlp.vim'
+Plug 'justinmk/vim-syntax-extra'
+Plug 'Manu-sh/NeonVimColorscheme'
+Plug 'Zabanaa/neuromancer.vim'
 Plug 'ClockworkNet/vim-vcl'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
@@ -13,7 +20,6 @@ Plug 'etdev/vim-hexcolor'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'SirVer/ultisnips'
-Plug 'evanmiller/nginx-vim-syntax'
 Plug 'honza/vim-snippets'
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
@@ -27,11 +33,13 @@ Plug 'rust-lang/rust.vim'
 Plug 'nono/vim-handlebars'
 Plug 'rizzatti/dash.vim'
 Plug 'bkad/CamelCaseMotion'
-Plug 'wakatime/vim-wakatime'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'cespare/vim-toml'
 Plug 'pangloss/vim-javascript'
+Plug 'Yggdroot/indentLine'
+Plug 'ambv/black',
 Plug 'bling/vim-airline'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'jeroenbourgois/vim-actionscript'
 Plug 'vim-airline/vim-airline-themes'

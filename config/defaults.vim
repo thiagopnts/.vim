@@ -38,7 +38,7 @@ set encoding=utf-8
 set termencoding=utf-8
 set ttyfast
 set colorcolumn=90
-set shell=/bin/sh
+set shell=/usr/local/bin/fish
 set t_Co=256
 "set ruler
 
@@ -49,7 +49,7 @@ if !has('nvim')
   set ttymouse=xterm2
 endif
 
-set guifont=Monaco\ for\ Powerline:h12
+set guifont=mononoki:h12
 set guioptions+=LlRrbmT
 set guioptions-=LlRrbmT
 "set guioptions-=m              "Remove menu bar
